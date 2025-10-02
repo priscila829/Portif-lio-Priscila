@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/img/favicon.svg">
+    <title>Mercado Livre Clone</title>
+
+    <!--BOOTSTRAP 5.3.7-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity=
+    "sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link href="mercado-livre.css/bootstrap.min.css" rel="styleseet">
+    
+    <!--CSS PROPRIO CUSTOMIZADO-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <!-- CSS PROPRIO CUSTOMIZADO-->
+     <link href="mercado-livre-esilizado.css" rel="stylesheet">
+
+    
+    
+</head>
+<body class="bg-light">
+
+
+<header class=" bg-ml " >
+    <div class="container">
+        <!--LINHA DE CIMA (LOGO, BUSCA E DISNEY PLUS)-->
+        <div class="row g-0 p-2">
+            <!--LOGO-->
+            <div class="col-xl-2 ">
+             <img class="img-fluid" src="img/img/logo2.png">
+            </div>
+            <!--BUSCA-->
+            <div class="col-xl-6 d-flex align-itens-center">
+                <div class="input-group">
+            <input id="busca" class="form-control shadow-sm" type="search" placeholder="Buscar produtos, marcas e muito mais..." >
+
+            <button class="shadow-sm rounded-0 border-0 border-start px-3 bg-white btn btn-outline-secondary" type="button"
+             id="button-addon2"> <i class="bi bi-search"></i></button>
+            </div>
+            
+            </div>
+            <!--DISNEY PLUS-->
+            <div class="col-xl-4 ">
+                <img class="img-fluid disney float-end " src="img/img/disney.webp">
+
+            </div>
+        </div>
+         <!--LINHA DE BAIXO(CEP E MENUS)-->
+         <div class="row g-0 ">
+            <!--COLUNA DO CEP  -->
+            <div class="col-xl-2 d-flex  align-items-center pb-1 ">
+            <div class="row ms-4 g-3">
+                <div class="col-3">
+                    <i class="fs-4 bi bi-geo-alt"></i>
+                </div>
+                <div class="col-9">
+                    <p class="fs-12px p-0 m-0 text-muted"> Informe o seu  </p>
+                    <p class="fs-14px p-0 m-0"> CEP</p>
+                </div>
+             </div>
+         </div>
+         <!--COLUNA ITENS DO MEIO -->
+            <div class="col-xl-6 ">
+ <nav class="navbar navbar-expand-lg  p-0">
+      <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-14px" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Categorias
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Supermercado</a></li>
+            <li><a class="dropdown-item" href="#">tecnologia</a></li>
+            <li><a class="dropdown-item" href="#">casa e móveis</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-14px"  href="#">Ofertas do dia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-14px" href="#">Histórico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-14px" href="#">Moda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-14px" href="#">Vender</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-14px" href="#">Contato</a>
+        </li>
+      
+      </ul>
+</nav>
+            </div>
+            <!--COLUNA ITENS A DIREITA -->
+            <div class="col-xl-4">
+        <nav class=" navbar navbar-expand-lg  p-0">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link text-dark fs-14px" href="#">Crie a sua conta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-dark fs-14px" href="#">Entre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-dark fs-14px" href="#">Compras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  text-dark fs-14px" href="#">
+            <i class="bi bi-cart2"></i>
+          </a>
+        </li>
+       
+      </ul>
+</nav>
+            </div>
+         </div>
+    </div>
+</header>
+
+<!-- BANNER PRINCIPAL -->
+<div class="banner swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img class="img-fluid" src="img/img/banner.webp">
+    </div>
+    <div class="swiper-slide">
+      <img class="img-fluid" src="img/img/banner1.webp">
+    </div>
+    <div class="swiper-slide">
+      <img class="img-fluid" src="img/img/banner2.webp">
+    </div>
+    <div class="swiper-slide">
+       <img class="img-fluid" src="img/img/banner3.webp">
+    </div>
+   
+  </div>
+  <div class="shadow swiper-button-next right-arrow bg-white pe-4 rounded-circle">
+   <i class="bi bi-chevron-compact-right"></i>
+  </div>
+  <div  class="shadow swiper-button-prev left-arrow bg-white ps-4 rounded-circle">
+   <i class="bi bi-chevron-compact-left"></i>
+  </div> 
+  
+  <div class="swiper-pagination"></div>
+</div>
+
+<!--PROPAGANDA DO MERCADO PAGO-->
+<section class="mt-5">
+  <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+          <div class="card py-2 rounded-0 border-0 shadow-sm">
+           <div class="card-body borda-azul">
+              <div class="row">
+                <div class="col-md-3 border-end ">
+                 <span class="fs-18px">  Pagamento rápido e seguro </span>  <br> 
+                  <span class="fs-14px text-muted"> com  Mercado Pago</span>
+                </div>
+                <div class="col-md-3">
+                  <img class="float-start mx-3" src="img/img/credit-card.svg">
+                  <span class="fs-18px"> Até 10 parcelas sem juros </span> <br>
+                  <a href="#" class="text-decoration-none">Ver mais</a>
+                </div>
+                <div class="col-md-3">
+                   <img class="float-start mx-3" src="img/img/mercado-creditsv2.svg">
+                  <span class="fs-18px"> Parcelameto sem cartão</span> <br>
+                  <a href="#" class="text-decoration-none">conheça o Mercado Crédito</a>
+                </div>
+                <div class="col-md-2">
+                   <img class="float-start mx-3" src="img/img/qr.svg">
+                  <span class="fs-18px">Via Pix</span> <br>
+                  <a href="#" class="text-decoration-none">ver mais</a>
+                </div>
+                <div class="col-md-1">
+                  <a href="#" class="btn-plus border"><i class="bi bi-plus-circle-fill"></i></a>
+                </div>
+              </div>
+           </div>
+         </div>
+         </div>
+       </div>
+  </div>
+</section>
+
+  <!--BASEADA NA SUA ULTIMA VISITA -->
+  <section class="mt-5"> 
+    <div class="container">
+      <h3 class="text-muted"> Baseado na sua última visita
+         <a href="#" class="ms-3 text-decoration-none fs-18px">Ver histórico</a>
+      </h3>
+      <div class="row">
+        <div class="col-md-12">
+           <!-- Swiper -->
+  <div class="swiper product">
+    <div class="swiper-wrapper">
+         <div class="swiper-slide">
+          <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/tv.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 2.599</span><br>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+         </div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/celular.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 999</span><br>
+             <span class="h5 card-title fs-3"> R$ 898
+              <span class="text-green fs-14px">10% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Sansung Galaxi A03 Core Dual SIM 32GB black 2 GB RAM </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+            <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/bicicleta.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 599</span><br>
+             <span class="h5 card-title fs-3"> R$ 399
+              <span class="text-green fs-14px">10% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Bicicleta de 21 marchas Super Turbo </p>
+              
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/ferramentas.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 129</span><br>
+             <span class="h5 card-title fs-3"> R$ 89
+              <span class="text-green fs-14px">5% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Caixa de ferramentas super Premium Profissional </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+            <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/impressora.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 4.599</span><br>
+             <span class="h5 card-title fs-3"> R$ 3.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Impressora PSG Top 6 cores e resoluçao limpa </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/liquidificador.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 447</span><br>
+             <span class="h5 card-title fs-3"> R$ 357
+              <span class="text-green fs-14px">20% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Liquidifador Industrial Alta Rotação 4 litros </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+          <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/notebook.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 4.599</span><br>
+             <span class="h5 card-title fs-3"> R$ 3.699
+              <span class="text-green fs-14px">19% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Ntebook FE15 intel Core i5 12th 16GB 512GB SSD Tela15,6</p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/panelas.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 209</span><br>
+             <span class="h5 card-title fs-3"> R$ 134
+              <span class="text-green fs-14px">35% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Conjunto de Panelas Antiaderente Teflon </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+</div>
+           <!--ITEM PRODUTO-->
+           <div class="swiper-slide">
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/pneu.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 548</span><br>
+             <span class="h5 card-title fs-3"> R$ 362
+              <span class="text-green fs-14px">33% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Pneu Wanli Aro17 Sa301 </p>
+              
+           </div>
+        </div>
+</div>
+          <div class="swiper-slide">
+             <!--ITEM PRODUTO-->
+          <div class="card border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/video-game.webp">
+            <div class="card-body card-content-prod text-start ">
+             <span class="fs-12px text-muted text-decoration-line-through">
+               R$ 3.599</span><br>
+             <span class="h5 card-title fs-3"> R$ 2.528
+              <span class="text-green fs-14px">25% OFF </span>
+             </span>
+             <p class="text-muted fs-14px area-titulo mt-2">
+              Microsoft Xbox series s 512GB </p>
+              <p class="fw-bold text-green fs-14px">Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p>
+           </div>
+        </div>
+       </div>
+    </div>
+       <div class="shadow swiper-button-next right-arrow-product bg-white pe-4 rounded-circle">
+   <i class="bi bi-chevron-compact-right"></i>
+  </div>
+  <div  class="shadow swiper-button-prev left-arrow-product bg-white ps-4 rounded-circle">
+   <i class="bi bi-chevron-compact-left"></i>
+  </div> 
+  
+    <div class="swiper-pagination"></div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--OFERTAS DO DIA-->
+  <section class="mt-5"> 
+    <div class="container">
+      <h3 class="text-muted"> Ofertas do dia
+         <a href="#" class="ms-3 text-decoration-none fs-18px">Ver todas</a>
+      </h3>
+      <div class="row">
+        <div class="col-md-12">
+           <!-- Swiper -->
+  <div class="swiper product">
+    <div class="swiper-wrapper">
+         <div class="swiper-slide">
+          <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/tv.webp">
+            <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+         </div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/celular.webp">
+            <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+            <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/bicicleta.webp">
+            <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/ferramentas.webp">
+            <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+            <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/impressora.webp">
+           <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/liquidificador.webp">
+           <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+          <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/notebook.webp">
+           <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+         <div class="swiper-slide">
+           <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/panelas.webp">
+           <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+           <!--ITEM PRODUTO-->
+           <div class="swiper-slide">
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/pneu.webp">
+           <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+</div>
+          <div class="swiper-slide">
+             <!--ITEM PRODUTO-->
+          <div class="card card-recolhido border-0 shadow" style="box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);">
+            <img class="border-bottom card-img-top" src="img/img/products/video-game.webp">
+           <div class="card-body card-content-prod oculto text-start ">
+             <span class="fs-12px text-muted promo-text text-decoration-line-through">
+               R$ 2.599</span>
+             <span class="h5 card-title fs-3"> R$ 1.399
+              <span class="text-green fs-14px">30% OFF </span>
+             </span>
+              <p class=" text-green fs-14px mt-2">
+                10x R$40 sem juros<br>
+               <b> Frete Grátis <i class="bi bi-lightning-charge-fill"></i> <i></i>Full </p> </b>
+              <p class="text-muted fs-14px area-titulo mt-2">
+              Smart Tv Sansung UN50AU77700GXZD LED 4K 50" 100V/240V </p>
+           </div>
+        </div>
+       </div>
+    </div>
+       <div class="shadow swiper-button-next right-arrow-product bg-white pe-4 rounded-circle">
+   <i class="bi bi-chevron-compact-right"></i>
+  </div>
+  <div  class="shadow swiper-button-prev left-arrow-product bg-white ps-4 rounded-circle">
+   <i class="bi bi-chevron-compact-left"></i>
+  </div> 
+  
+    <div class="swiper-pagination"></div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BENEFICOS DO MERCADO PONTOS-->
+  <section class="mt-5">
+    <div class="container">
+       <h3 class="text-muted"> Beneficios do Mercado Pontos
+         <a href="#" class="ms-3 text-decoration-none fs-18px">Ver todos os beneficios</a>
+      </h3>
+      <div class="row mt-5 ">
+         <div class="col-md-4">
+          <a href="#">
+            <img src="img/img/disney-card.webp" class="img-fluid rounded ">
+          </a>
+           </div>
+         <div class="col-md-4">
+           <img src="img/img/hbo-card.webp" class="img-fluid rounded ">
+           </div>
+         <div class="col-md-4">
+            <img src="img/img/paramont-card.webp" class="img-fluid rounded ">
+           </div>
+      </div>
+        
+    </div>
+  </section>
+
+  <!--PROPAGANDA-->
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="#">
+          <img src="img/img/propaganda.webp" class="rounded img-fluid">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br>
+
+  <!--FOOTER (RODAPÉ)-->
+  <footer class="bg-white py-3 my-4">
+    <div class="container">
+      <div class="row m-auto">
+        <div class="col-md-3 ms-5 pt-5 text-center">
+          <img class="my-4" src="img/img/payment.svg">
+          <h5>Escolha como pagar</h5>
+          <p class="fs-14px text-muted">Com o Mercado Pago, você paga com cartão, boleto ou Pix.
+           Você também pode pagar em até 12x no boleto com o Mercado Crédito.</p>
+           <a href="#" class="text-decoration-none">Como pagar com Mercado Pago</a>
+        </div>
+        <div class="col-md-1 d-flex justify-content-center align-items-center"
+             style="margin-top: 120px; height: 70px">
+          <div class="vr"></div>
+        </div>
+
+        <div class="col-md-3 pt-5 text-center">
+          <img class="my-4" src="img/img/shipping.svg">
+          <h5>Frete grátis a partir de R$79</h5>
+          <p class="fs-14px text-muted">Só por estar cadastrado no Mercado Livre, 
+            você tem frete grátis em milhares de produtos.É um benefício do Mercado Pontos.</p>
+           <a href="#" class="text-decoration-none">Saiba mais sobre este benefício </a>
+        </div>
+        <div class="col-md-1 d-flex justify-content-center align-items-center"
+             style="margin-top: 120px; height: 70px">
+          <div class="vr"></div>
+        </div>
+
+        <div class="col-md-3 pt-5 text-center">
+          <img class="my-4" src="img/img/protected.svg">
+          <h5>Segurança, do início ao fim</h5>
+          <p class="fs-14px text-muted">você não gostou do que comprou? Devolva!
+             No Mercado Livre não há nada que você não possa fazer, porque você está sempre protegido.</p>
+           <a href="#" class="text-decoration-none">Como te protegemos</a>
+        </div>
+
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+             <a id="btn-information"
+              class="btn btn-white border-bottom-0 rounded-0 border-top border-start border-end"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Mais Informações <i id="chevron" class="ms-2 bi bi-chevron-up"></i> </a>
+    <div class="collapse bg-light" id="collapseExample">
+     <div class="row">
+      <div class="col">
+        <h6 class="mt-5 mb-3 fw-bold">Sobre o</h6>
+        <a href="#" class="text-muted text-decoration-none">Mercado Livre</a><br>
+        <a href="#" class="text-muted text-decoration-none">Investor relations</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Tendências</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Sustentabilidade</a><br>
+      </div>
+
+       <div class="col">
+        <h6 class="mt-5 mb-3 fw-bold">Outros Sites</h6>
+        <a href="#" class="text-muted text-decoration-none">Desenvolvedores</a><br>
+        <a href="#" class="text-muted text-decoration-none">Mercado Pago</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Mercado Envios</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Mercado Shops</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Mercado Ads</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Mercado Livre Ideiais</a><br>
+      </div>
+
+       <div class="col">
+        <h6 class="mt-5 mb-3 fw-bold">Contato</h6>
+        <a href="#" class="text-muted text-decoration-none">Comprar</a><br>
+        <a href="#" class="text-muted text-decoration-none">Vender</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Solução de problemas</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Segurança</a><br>
+      </div>
+
+      <div class="col">
+        <h6 class="mt-5 mb-3 fw-bold">Redes Sociais</h6>
+        <a href="#" class="text-muted text-decoration-none">Twitter</a><br>
+        <a href="#" class="text-muted text-decoration-none">Facebook</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Instagram</a><br>
+        <a href="#" class="text-muted text-decoration-none" >YouTube</a><br>
+      </div>
+
+        <div class="col">
+        <h6 class="mt-5 mb-3 fw-bold">Minha conta</h6>
+        <a href="#" class="text-muted text-decoration-none">Entre</a><br>
+        <a href="#" class="text-muted text-decoration-none">Vendedor</a><br>
+      </div>
+
+      <div class="col">
+        <h6 class="mt-5 mb-3 fw-bold">Mercado Pontos</h6>
+        <a href="#" class="text-muted text-decoration-none">Nivel 6</a><br>
+        <a href="#" class="text-muted text-decoration-none">Disney+</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Star+</a><br>
+        <a href="#" class="text-muted text-decoration-none" >HBO MAX</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Paramount+</a><br>
+        <a href="#" class="text-muted text-decoration-none" >Deezer</a><br>
+      </div>
+     </div>
+ 
+</div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col">
+         <a href="#" class="ms-3 fs-12px text-decoration-none text-dark" >Trabalhe conosco</a>
+         <a href="#" class="ms-3 fs-12px text-decoration-none text-dark" >Termos e condições</a>
+         <a href="#" class="ms-3 fs-12px text-decoration-none text-dark" >Como cuidamos da sua privacidade</a>
+         <a href="#" class="ms-3 fs-12px text-decoration-none text-dark" >Acessibilidade</a>
+         <a href="#" class="ms-3 fs-12px text-decoration-none text-dark" >Contato</a>
+         <a href="#" class="ms-3 fs-12px text-decoration-none text-dark" >Informações sobre seguros</a>
+         <p class="mt-3 text-muted fs-12px">Copyright © 1999-2025 Ebazar.com.br LTDA.<BR>
+          CNPJ nº 03.007.331/0001-41 / Av. das Nações Unidas, nº3.003. Bonfim. Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <!--BOOTSTRAP 5.3.7 JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity
+    ="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+   </script>
+
+  <!-- SWIPER JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  //CHEVRON DO "MAIS INFORMAÇÕES"
+  document.getElementById('btn-information').addEventListener("click",()=>{
+    var classe = document.getElementById('chevron').className
+    if(classe=="ms-2 bi bi-chevron-up"){
+      document.getElementById('chevron').className = "ms-2 bi bi-chevron-down";
+    }else{
+      document.getElementById('chevron').className = "ms-2 bi bi-chevron-up";
+    }
+  })
+</script>
+
+
+
+<!-- INICIALIZAR BANNER PRINCIPAL -->
+
+  <script>
+  var swiper = new Swiper(".banner", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    keyboard: true,
+  });
+
+  //SWIPER DOS PRODUTOS
+  var swiper = new Swiper(".product", {
+      slidesPerView: 5,
+      spaceBetween: 20,
+      slidesPerGroup: 5,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+       navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    });
+
+</script>
+
+<!-- ESTILO BÁSICO PARA O BANNER -->
+<style>
+  .banner {
+    width: 100%;
+    height: 300px; /* ajuste conforme sua necessidade */
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: white;
+  }
+</style>
+
+
+</body>
+</html>
