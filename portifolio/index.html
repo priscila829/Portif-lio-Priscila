@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+</head>
+
+<body>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio " class="menu-link">início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">contato</a>
+            </li>
+        </ul>
+    </nav> <br> <br> <br> <br> <br>
+
+    <main id="inicio" class="cabecalho">  
+
+        <!--adicionar imagem da foto -->
+        <img src="img/Captura de tela 2025-05-17 121754.png" alt="foto de perfil" class="foto-perfil">
+        <h1> Priscila Souza</h1>
+      <b>  <p class="cabecalho-sub-titulo"> Desenvolvedora </p> </b>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2> <br>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo"> Olá me chamo Priscila, tenho 18 anos e atualmente curso Analise e Desenvolvimento De Sistemas, desde muito nova gosto de explorar software e, com 17 anos comecei a entrar no mundo da tecnologia realizando cursos de programação gratuitos através da internet, vi como essa área tem grande escala de desenvolvimento, por isso, decidir cursar essa área por grandes oportunidades e também por hobbie, sei que quando trabalhamos com o que gostamos temos a capacidade de absorver cada vez mais conhecimento e experiencias fazendo com que os resultados sejam positivos, busco uma oportunidade para mostrar meu empenho e me desenvolver. </p>
+
+
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">meus Projetos</h2>
+        <p class="front"><b>front-end</p></b>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <!--adicionar imagem da foto -->
+                <img src="img/foto-agencia.png" alt="foto de perfil" class="imagem-perfil">
+                <div class="caixa-textos-projetos">
+                    
+                    <h3 class="info-prjetos">Agencia de marketing</h3>
+                    <p class="paragrafo-projeto">modelo de agencia de marketing, com foco em desenvolvimento de sites e aplicativos.</p>
+                    <a href="agencia.html" target="_blank">Clique aqui para ver o projeto</a>
+                    
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <!--adicionar imagem da foto -->
+                <img src="img/foto-forca.png" alt="foto de perfil" class="imagem-perfil">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-prjetos">Jogo da forca </h3>
+                    <p class="paragrafo-projeto"> com palavras que mudam conforme as rodadas participadas, criado com HTML, CSS e JAVASCRIPT</p>
+                    <a href="forca.html" target="_blank">Clique aqui para ver o projeto</a>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <!--adicionar imagem da foto -->
+                <img src="img/Captura de tela 2025-05-28 133450.png" alt="foto de perfil" class="imagem-perfil">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-prjetos">clone site apple</h3>
+                    <p class="paragrafo-projeto">clone do site da Apple.</p>
+                    <a href="apple.html" target="_blank">Clique aqui para ver o projeto</a>
+                </div>
+         
+            </div>
+
+              <div class="projetos-card">
+                <!--adicionar imagem da foto -->
+                <img src="img/Captura de tela 2025-10-01 130855.png" alt="foto de perfil" class="imagem-perfil">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-prjetos">Clínica Veterinária </h3>
+                    <p class="paragrafo-projeto"> Site de  Clínica Veterinária online utilizando recursos do  bootstrap  </p>
+                    <a href="doguinhos.html" target="_blank">Clique aqui para ver o projeto</a>
+                </div>
+
+                  </div>
+
+            <div class="projetos-card">
+                <!--adicionar imagem da foto -->
+                <img src="img/Captura de tela 2025-08-07 232414.png" alt="foto de perfil" class="imagem-perfil">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-prjetos">clone site Mercado Livre</h3>
+                    <p class="paragrafo-projeto">clone do site Mercado Livre.</p>
+                    <a href="mercado-livre.html" target="_blank">Clique aqui para ver o projeto</a>
+                </div>
+
+               
+            
+
+                
+
+
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="digite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form"> Enviar WhatsApp</button> </button>
+        </form>
+    </section>
+
+    <script>
+
+        function enviarWhats(event) {
+            event.preventDefault(); // Impede o envio do formulário padrão
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511951350799'
+
+            const texto = `Olá!, me chamo ${nome},  ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+            const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+            window.open(url, '_blank')
+           
+
+
+        }
+
+    </script>
+</body>
+
+</html>
